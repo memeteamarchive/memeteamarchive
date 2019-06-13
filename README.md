@@ -2,12 +2,6 @@
 
 follow the tutorial below and replace this with the output.txt file
 
-[.sfk](.sfk) 
-..
-[.wav](.wav) 
-..
-
-
 ## How to add more archives
 
 [Video Tutorial](tutorial.mp4)
