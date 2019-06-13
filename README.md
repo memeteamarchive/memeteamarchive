@@ -1,6 +1,6 @@
 ## Archive List
 
-[#ali-art](https://github.com/memeteamarchive/memeteamarchive/blob/master/The%20Meme%20Team%C2%A9%E2%84%A2%20-%20ali-art%20%5B518572162894921758%5D.html?raw=true)
+[#ali-art](https://github.com/memeteamarchive/memeteamarchive/blob/master/The%20Meme%20Team%C2%A9%E2%84%A2%20-%20ali-art%20%5B518572162894921758%5D.html)
 
 ### Markdown
 
