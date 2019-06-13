@@ -1,6 +1,6 @@
 ## Archive List
 
-[ali-art](The Meme Team©™ - ali-art [518572162894921758].html)
+[ali-art](ali-art.html)
 
 ### Markdown
 
