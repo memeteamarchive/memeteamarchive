@@ -1,0 +1,3001 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The Meme Team&#169;™ - spore-whores</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <style>
+        /* === GENERAL === */
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/e8acd7d9bf6207f99350ca9f9e23b168.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/3bdef1251a424500c1b3a78dea9b7e57.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/be0060dafb7a0e31d2a1ca17c0708636.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/8e12fb4f14d9c4592eb8ec9f22337b04.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, Monospace;
+}
+
+.pre--multiline {
+    margin-top: 4px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 5px;    
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 85%;
+}
+
+.mention {
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.45em;
+    height: 1.45em;
+    margin: 0 1px;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1rem;
+    height: 1rem;
+}
+
+.emoji--large {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* === INFO === */
+
+.info {
+    display: flex;
+    max-width: 100%;
+    margin: 0 5px 10px 5px;    
+}
+
+.info__guild-icon-container {
+    flex: 0;
+}
+
+.info__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.info__metadata {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.info__guild-name {
+    font-size: 1.4em;
+}
+
+.info__channel-name {
+    font-size: 1.2em;
+}
+
+.info__channel-topic {
+    margin-top: 2px;
+}
+
+.info__channel-message-count {
+    margin-top: 2px;
+}
+
+.info__channel-date-range {
+    margin-top: 2px;
+}
+
+/* === CHATLOG === */
+
+.chatlog {
+    max-width: 100%;
+    margin-bottom: 24px;
+}
+
+.chatlog__message-group {
+    display: flex;
+    margin: 0 10px;
+    padding: 15px 0;
+    border-top: 1px solid;
+}
+
+.chatlog__author-avatar-container {
+    flex: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    flex: 1;
+    min-width: 50%;
+    margin-left: 20px;
+}
+
+.chatlog__author-name {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 5px;
+    font-size: .75em;
+}
+
+.chatlog__content {
+    padding-top: 5px;
+    font-size: .9375em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 3px;
+    font-size: .8em;
+}
+
+.chatlog__attachment {
+    margin: 5px 0;
+}
+
+.chatlog__attachment-thumbnail {
+    max-width: 50%;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    max-width: 520px;
+    margin-top: 5px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 4px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    width: 100%;
+    display: flex;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.chatlog__embed-author-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 10px;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-size: .875em;
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 20px;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 10px;
+}
+
+.chatlog__embed-image {    
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 10px;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-weight: 500;
+    font-size: .75em;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 6px 2px 2px 2px;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 6px;
+    font-size: .875em;
+}
+
+.chatlog__bot-tag {
+    margin-left: 0.3em;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    padding: 1px 2px;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    position: relative;
+    top: -.2em;
+}
+    </style>
+    <style>
+        /* === GENERAL === */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30 !important;
+    color: #839496 !important;
+}
+
+.mention {
+    color: #7289da;
+}
+
+/* === INFO === */
+
+.info__guild-name {
+    color: #ffffff;
+}
+
+.info__channel-name {
+    color: #ffffff;
+}
+
+.info__channel-topic {
+    color: #ffffff;
+}
+
+/* === CHATLOG === */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</head>
+<body>
+    
+<div class="info">
+    <div class="info__guild-icon-container">
+        <img class="info__guild-icon" src="https://cdn.discordapp.com/icons/300504379557937154/a_265416a7056de7b199c743924b1bc00c.png" />
+    </div>
+    <div class="info__metadata">
+        <div class="info__guild-name">The Meme Team&#169;™</div>
+        <div class="info__channel-name">spore-whores</div>
+        
+            <div class="info__channel-topic">yeah can i get a fuckin uhhhh 25,800$ alliance fee.
+it’s either you pay up or you become public enemy #1 for our civilization come on man.</div>
+
+        <div class="info__channel-message-count">165 messages</div>
+        
+    </div>
+</div>
+
+<div class="chatlog">
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300498360203214859/0f6368f068ad9c7abc5d62bf2e707289.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="CanisChiroptera#8673" data-user-id="300498360203214859">CanisChiroptera</span>
+                <span class="chatlog__timestamp">10-Nov-18 08:20 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Badda bing badda boom</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><span class="mention" title="Espurresso#7097">@Espurresso</span></span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/333080389323194369/11e752b8c34de862767996432f82aac1.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Nutty✨#3767" data-user-id="333080389323194369">Nutty✨</span>
+                <span class="chatlog__timestamp">10-Nov-18 08:20 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">second</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">eat my ass</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/329070581175549953/b5894ccbd521365e993bbd5975b1a3df.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="TheIncrediblyIronicWaffle#7914" data-user-id="329070581175549953">TheIncrediblyIronicWaffle</span>
+                <span class="chatlog__timestamp">10-Nov-18 08:20 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Bro, check out my Spore creation</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/511032346125008904/511032533014544409/image0-101.jpg">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/511032346125008904/511032533014544409/image0-101.jpg" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">10-Nov-18 08:21 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">stabberflinger empire rise up</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/333080389323194369/11e752b8c34de862767996432f82aac1.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Nutty✨#3767" data-user-id="333080389323194369">Nutty✨</span>
+                <span class="chatlog__timestamp">10-Nov-18 08:21 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">furby hah</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/208438363991048192/9be83a3c4a72c5cb3b607d09e2ac6de2.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="uwu#0437" data-user-id="208438363991048192">uwu</span>
+                <span class="chatlog__timestamp">10-Nov-18 08:22 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">spore me daddy <img class="emoji " alt="gachiGASM" title="gachiGASM" src="https://cdn.discordapp.com/emojis/359193253633064961.png" /></span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">gimmie your spores</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/329070581175549953/b5894ccbd521365e993bbd5975b1a3df.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="TheIncrediblyIronicWaffle#7914" data-user-id="329070581175549953">TheIncrediblyIronicWaffle</span>
+                <span class="chatlog__timestamp">10-Nov-18 08:24 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Mushroom Niggas Be Like:</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/511032346125008904/511033460371226624/Etika_Disassociate.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/511032346125008904/511033460371226624/Etika_Disassociate.png" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300498360203214859/0f6368f068ad9c7abc5d62bf2e707289.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="CanisChiroptera#8673" data-user-id="300498360203214859">CanisChiroptera</span>
+                <span class="chatlog__timestamp">10-Nov-18 08:26 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Pinned a message.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/110814661741424640/9bc03b45a566b7f8fcfbf43b2a391caa.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="SquidSystem#4160" data-user-id="110814661741424640">SquidSystem</span>
+                <span class="chatlog__timestamp">10-Nov-18 08:29 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">spores are toxic smh</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">10-Nov-18 09:45 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/511032346125008904/511053737825927168/image0.jpg">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/511032346125008904/511053737825927168/image0.jpg" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/511032346125008904/511053769920872448/image0.jpg">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/511032346125008904/511053769920872448/image0.jpg" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">11-Nov-18 12:19 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">hey <span class="mention" title="CanisChiroptera#8673">@CanisChiroptera</span> i hope you like the description</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300498360203214859/0f6368f068ad9c7abc5d62bf2e707289.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="CanisChiroptera#8673" data-user-id="300498360203214859">CanisChiroptera</span>
+                <span class="chatlog__timestamp">11-Nov-18 12:25 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">I fuckin love it</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">11-Nov-18 12:31 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">thank you</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">11-Nov-18 10:38 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/511032346125008904/511248317586604062/video.mov">
+                                
+                                    Attachment: video.mov (5.83 MB)
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300844007779729409/4c3f56db5dd769968e52be8cf1fef391.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="『N O  B a d s』#0595" data-user-id="300844007779729409">『N O  B a d s』</span>
+                <span class="chatlog__timestamp">11-Nov-18 10:53 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Pinned a message.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/214776983416995840/c589232ac6691a3676efc01f3615545e.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Monkena#7041" data-user-id="214776983416995840">Monkena</span>
+                <span class="chatlog__timestamp">11-Nov-18 11:05 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">BIG NOSE GANG</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300498360203214859/0f6368f068ad9c7abc5d62bf2e707289.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="CanisChiroptera#8673" data-user-id="300498360203214859">CanisChiroptera</span>
+                <span class="chatlog__timestamp">11-Nov-18 01:55 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Powerful video</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">11-Nov-18 01:58 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">I GOT TO THE ADVANCED CELL EDITOR</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/511032346125008904/511298817325531137/I_DID_IT_AA.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/511032346125008904/511298817325531137/I_DID_IT_AA.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">duuude there’s all these different parts</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">i’m freaking out this feels like a dream</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">once you save your cell though it brings you back to the start up screen thing</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">yo there’s a flora editor too but it’s really unfinished</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">oh it crashed</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">so the cell editor is way more complete, if not ready to be used, than the flora editor</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">so why didn’t we get all the extra parts? i don’t know!</span>
+
+                                <span class="chatlog__edited-timestamp" title="11-Nov-18 02:13 PM">(edited)</span>
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">oh btw i think resizing certain parts of the plant you’re making like how you can resize a limb causes it to crash</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300498360203214859/0f6368f068ad9c7abc5d62bf2e707289.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="CanisChiroptera#8673" data-user-id="300498360203214859">CanisChiroptera</span>
+                <span class="chatlog__timestamp">11-Nov-18 03:00 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Haha I remember those</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">It was like finding buried treasure</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">11-Nov-18 03:02 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">dude i always thought it was a hoax idk why</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">11-Nov-18 11:10 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://youtu.be/ZS6hPI43OgM">https://youtu.be/ZS6hPI43OgM</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCnCa72u7xxnl2IooVtmb38A">SporeUGSMusic</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://youtu.be/ZS6hPI43OgM"><span class="markdown">Spore Soundtrack - Downtown Mayhem [UNUSED]</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">Actual song name is &quot;Party People - The Sound Stylistics&quot;</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/ZS6hPI43OgM/maxresdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/ZS6hPI43OgM/maxresdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">this is so fucking groovy</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://youtu.be/kIdWw443Ya8">https://youtu.be/kIdWw443Ya8</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCnCa72u7xxnl2IooVtmb38A">SporeUGSMusic</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://youtu.be/kIdWw443Ya8"><span class="markdown">Spore Soundtrack - Early Unused Wierdness</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">Sorry to the people of German for not being able to see this video. I may upload a separate video later to bypass that. Anyway... I found these in the stand-...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/kIdWw443Ya8/maxresdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/kIdWw443Ya8/maxresdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://youtu.be/tKwRFO-O5Fw">https://youtu.be/tKwRFO-O5Fw</a>
+NOOOO</span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCnCa72u7xxnl2IooVtmb38A">SporeUGSMusic</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://youtu.be/tKwRFO-O5Fw"><span class="markdown">Spore Soundtrack - Farewell, My Homenest / We&#39;re Reunited and We&#39;r...</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">Decided to combination both tracks since they have similar events. The first one plays when your species migrates to newer lands, and the last one plays when...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/tKwRFO-O5Fw/maxresdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/tKwRFO-O5Fw/maxresdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">NO OH GOD IM CRYING</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/110814661741424640/9bc03b45a566b7f8fcfbf43b2a391caa.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="SquidSystem#4160" data-user-id="110814661741424640">SquidSystem</span>
+                <span class="chatlog__timestamp">12-Nov-18 01:38 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Sporioware</span>
+
+                                <span class="chatlog__edited-timestamp" title="12-Nov-18 01:39 PM">(edited)</span>
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/208438363991048192/9be83a3c4a72c5cb3b607d09e2ac6de2.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="uwu#0437" data-user-id="208438363991048192">uwu</span>
+                <span class="chatlog__timestamp">13-Nov-18 04:14 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">so when can I get spored</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">haha funny</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">get it</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>spores</em></span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">13-Nov-18 04:46 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">ecks dee</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">14-Nov-18 05:54 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://youtu.be/3ldtMcRbdE8">https://youtu.be/3ldtMcRbdE8</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/user/HDGamingHD">GaminGHD</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://youtu.be/3ldtMcRbdE8"><span class="markdown">Gaming History: Spore &quot;No Man&#39;s Sky before it was cool&quot;</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">Spore - A decade ago, uttering the word “Spore” would get people talking about the future of gaming, how everything was about to change. How procedural gener...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/3ldtMcRbdE8/maxresdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/3ldtMcRbdE8/maxresdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">a rather interesting video if you scrape past all the inconsistencies</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">14-Nov-18 06:43 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">fun little fact: spore is the very thing that inspired me to draw</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">so i hold it very close to my heart</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">14-Nov-18 09:54 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">IMAGINE UNIRONICALLY ONLY BEING ABLE TO EAT ONE TYPE OF FOOD
+THIS POST WAS MADE BY OMNIVORE GANG</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">14-Nov-18 10:06 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">WHY DO YOU GET LEGS JUST KEEP ON BREATHING WATER LMAO</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">14-Nov-18 10:27 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://spore.fandom.com/wiki/Spore_Bot_Parts_Pack">https://spore.fandom.com/wiki/Spore_Bot_Parts_Pack</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(79,84,92,255)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://spore.fandom.com/wiki/Spore_Bot_Parts_Pack"><span class="markdown">Spore Bot Parts Pack</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">Spore Bot Parts Pack is an exclusive and promotional expansion pack for Spore and Creature Creator game released since 2010 consisting over 14 new mech-style robotic parts for Creature Creator and...</span></div>
+
+                                    </div>
+
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">17-Nov-18 01:29 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">tfw u buy out an entire celestial clump of a sun and some planets epic style</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">17-Nov-18 09:40 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/511032346125008904/513589295416868864/image0.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/511032346125008904/513589295416868864/image0.png" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">18-Nov-18 11:38 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/511032346125008904/513800181158772777/video.mov">
+                                
+                                    Attachment: video.mov (4.09 MB)
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">18-Nov-18 02:24 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">BOUGHT OUT 2 SOLAR SYSTEMS BAYBEE</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/263354148106272771/cfa0af30fe026b8d664ee6993c128908.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="poppi#0224" data-user-id="263354148106272771">poppi</span>
+                <span class="chatlog__timestamp">18-Nov-18 02:41 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Relatable</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">18-Nov-18 05:46 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">ECO TERRORISM! FUCK YEAH</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300498360203214859/0f6368f068ad9c7abc5d62bf2e707289.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="CanisChiroptera#8673" data-user-id="300498360203214859">CanisChiroptera</span>
+                <span class="chatlog__timestamp">18-Nov-18 05:46 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Fuckin stabberflingers, &quot;terraform this planet with one of each tool&quot; like NIGGA</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">I NEEDED AN EXTRA TEMPERATURE RAISER TO EVEN GET IT IN T1</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">THAT WAS LIKE $100,000</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">18-Nov-18 05:47 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">ICE STORMS AND METEOR SHOWERS? NIGGA YES</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">just go ctrl+alt+c and do moremoney+up</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300498360203214859/0f6368f068ad9c7abc5d62bf2e707289.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="CanisChiroptera#8673" data-user-id="300498360203214859">CanisChiroptera</span>
+                <span class="chatlog__timestamp">18-Nov-18 05:47 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Lol I would but this ain&#39;t my cheaty file, I was just playing with GA</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Then again</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">The stabberflingers are all-powerful</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Hmm</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Can there just be a singular command that maxes out literally everything
+Like gives you every single item in a full stack, full money, all the parts and shit</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Call it Spode Mode</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">18-Nov-18 05:49 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">god i wish</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">me, knocking @ EA&#39;s door: hey remember spore i got some ideas for your fuckasses</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300498360203214859/0f6368f068ad9c7abc5d62bf2e707289.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="CanisChiroptera#8673" data-user-id="300498360203214859">CanisChiroptera</span>
+                <span class="chatlog__timestamp">18-Nov-18 05:49 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">THE WORLD NEEDS A NEW SPORE THEY JUST DON&#39;T KNOW IT YET</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">18-Nov-18 05:49 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">WE ARE WOKE</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">WE ARE WOKE IN THE NAME OF SPORE 2. STATE YOUR BUISNESS.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300498360203214859/0f6368f068ad9c7abc5d62bf2e707289.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="CanisChiroptera#8673" data-user-id="300498360203214859">CanisChiroptera</span>
+                <span class="chatlog__timestamp">18-Nov-18 05:50 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Woke as fuck, these knee-eyes are wide open</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Shit I wanna play Spore now</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Well I&#39;ve done like 20 slides I think I can get away with it</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">18-Nov-18 06:44 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">WHAT THE FUCK IS THIS</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/511032346125008904/513907423594020874/image0.jpg">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/511032346125008904/513907423594020874/image0.jpg" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">18-Nov-18 06:54 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/511032346125008904/513910002944180224/what_would_you_do_if_this_thing_ran_at_you_full_speed_in_the_middle_of_the_night.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/511032346125008904/513910002944180224/what_would_you_do_if_this_thing_ran_at_you_full_speed_in_the_middle_of_the_night.png" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">19-Nov-18 01:28 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">im really concerned about that spore movie topic from a few nights back</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">like... if it did get out of development hell would it be good or bad</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">if it did come out would we get cell plushies?? cause i want cell plushies</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">i wanna cuddle with those things they’re so cute</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><span class="mention" title="CanisChiroptera#8673">@CanisChiroptera</span> thoughts on cell plushies</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300498360203214859/0f6368f068ad9c7abc5d62bf2e707289.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="CanisChiroptera#8673" data-user-id="300498360203214859">CanisChiroptera</span>
+                <span class="chatlog__timestamp">19-Nov-18 02:19 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Yes</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">19-Nov-18 10:02 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/511032346125008904/514319650658582528/image0.jpg">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/511032346125008904/514319650658582528/image0.jpg" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">what the fuck is that planet</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300498360203214859/0f6368f068ad9c7abc5d62bf2e707289.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="CanisChiroptera#8673" data-user-id="300498360203214859">CanisChiroptera</span>
+                <span class="chatlog__timestamp">19-Nov-18 10:04 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Fucking epic</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">19-Nov-18 10:04 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">freecam is super trippy</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">19-Nov-18 10:23 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">just killed an epic <img class="emoji " alt="😎" title="😎" src="https://twemoji.maxcdn.com/2/72x72/1f60e.png" /></span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300498360203214859/0f6368f068ad9c7abc5d62bf2e707289.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="CanisChiroptera#8673" data-user-id="300498360203214859">CanisChiroptera</span>
+                <span class="chatlog__timestamp">19-Nov-18 10:27 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><img class="emoji emoji--large" alt="😎" title="😎" src="https://twemoji.maxcdn.com/2/72x72/1f60e.png" /> <img class="emoji emoji--large" alt="😎" title="😎" src="https://twemoji.maxcdn.com/2/72x72/1f60e.png" /></span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">20-Nov-18 03:31 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">today i:
+eradicated an entire empire just by buying out one (1) whole star system</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">i ended war that way</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">case in point: money makes the universe go ‘round</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300498360203214859/0f6368f068ad9c7abc5d62bf2e707289.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="CanisChiroptera#8673" data-user-id="300498360203214859">CanisChiroptera</span>
+                <span class="chatlog__timestamp">20-Nov-18 03:34 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Nothing will ever entertain me more than the cartoony-ass mechanic where you can make them stop fighting you whenever you want if you have money</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">I&#39;ll start war with some enormous empire and then start wrecking their shit until I run out of energy, then I&#39;ll bribe them to stop fighting me with money, get them to refuel my ship, and start killing them again</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Over and over until they&#39;re all dead</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">20-Nov-18 03:37 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">also also</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">opening the command box and constantly doing refillmotives as you watch the helpless enemy AI try to dent your HP bar</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">also i take back everything i said about space stage being boring it’s fun fucking around with ecosystems</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">23-Nov-18 03:37 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/511032346125008904/515672175013789696/yikes_chief.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/511032346125008904/515672175013789696/yikes_chief.png" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">25-Nov-18 03:13 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/511032346125008904/516391010448834601/image0.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/511032346125008904/516391010448834601/image0.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/511032346125008904/516391866007289858/CRE_-1a24d245_ful.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/511032346125008904/516391866007289858/CRE_-1a24d245_ful.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">im gonna do something w/ this, brb</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">25-Nov-18 03:25 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Insectvul the Trucks Coming. Oh my god it has headphones on. It can’t hear us. Oh my god.</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/511032346125008904/516393978858569728/image0.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/511032346125008904/516393978858569728/image0.png" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/263354148106272771/cfa0af30fe026b8d664ee6993c128908.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="poppi#0224" data-user-id="263354148106272771">poppi</span>
+                <span class="chatlog__timestamp">25-Nov-18 03:56 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">oh I have spore on my steam library</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">should I download it</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">25-Nov-18 03:57 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">yeah its good</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">01-Dec-18 06:58 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/511032346125008904/518621865485271046/video.mov">
+                                
+                                    Attachment: video.mov (885.63 KB)
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">01-Dec-18 07:14 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/511032346125008904/518625873654448138/image0.jpg">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/511032346125008904/518625873654448138/image0.jpg" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/511032346125008904/518625887948767264/image0.jpg">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/511032346125008904/518625887948767264/image0.jpg" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/511032346125008904/518625912263147528/image0.jpg">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/511032346125008904/518625912263147528/image0.jpg" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/511032346125008904/518625931942690820/image0.jpg">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/511032346125008904/518625931942690820/image0.jpg" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">me: *opens steam*
+me:</span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/511032346125008904/518625976134139924/image0.jpg">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/511032346125008904/518625976134139924/image0.jpg" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">01-Dec-18 07:40 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">“hi, i’m the g-mail icon”</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">that’s so fucking great</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">01-Dec-18 10:40 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://youtu.be/g3SsZYZaqxc">https://youtu.be/g3SsZYZaqxc</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCnCa72u7xxnl2IooVtmb38A">SporeUGSMusic</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://youtu.be/g3SsZYZaqxc"><span class="markdown">Spore Beta Music - Thriving Like 2005</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">Previous Track: www.youtube.com/watch?v=wiMdbnnFhy4 Next Track: www.youtube.com/watch?v=ZqUbxN7Gve4 Playlist for this Step: www.youtube.com/playlist?list=PLr...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/g3SsZYZaqxc/maxresdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/g3SsZYZaqxc/maxresdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">this is such a bop</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">06-Dec-18 05:18 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">ughhhh <a href="https://youtu.be/9j8qsmss2H8">https://youtu.be/9j8qsmss2H8</a> is so fucking cool</span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,1)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+                                            <div class="chatlog__embed-author">
+
+                                                    <span class="chatlog__embed-author-name">
+                                                            <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCnCa72u7xxnl2IooVtmb38A">SporeUGSMusic</a>
+                                                    </span>
+                                            </div>
+
+                                            <div class="chatlog__embed-title">
+                                                    <a class="chatlog__embed-title-link" href="https://youtu.be/9j8qsmss2H8"><span class="markdown">Spore Beta Music - Industrious Metal</span></a>
+                                            </div>
+
+                                        <div class="chatlog__embed-description"><span class="markdown">Previous Track: www.youtube.com/watch?v=jiMWGdL--5I Next Track: www.youtube.com/watch?v=GXlB6kZGGKU Playlist for this Step: www.youtube.com/playlist?list=PLr...</span></div>
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/9j8qsmss2H8/maxresdefault.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/9j8qsmss2H8/maxresdefault.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">why didn’t it make it into the final game</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">12-Dec-18 03:37 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">shskgsjaha god. didnt spore get lots of flack fir having securom</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">22-Dec-18 07:59 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">GAMERS I NEED CAPTAIN NAMES</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300498360203214859/0f6368f068ad9c7abc5d62bf2e707289.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="CanisChiroptera#8673" data-user-id="300498360203214859">CanisChiroptera</span>
+                <span class="chatlog__timestamp">22-Dec-18 07:59 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Fonsi</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/396905475238789120/7477e1eb9febcef792efccdb83874a22.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Dr.Jekyll#9897" data-user-id="396905475238789120">Dr.Jekyll</span>
+                <span class="chatlog__timestamp">22-Dec-18 08:01 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">No no I got one</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Call him</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">“Captain Lou Alabama”</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">I.e.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">The guy who plays Mario in the show</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">I added Alabama but ok</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/110814661741424640/9bc03b45a566b7f8fcfbf43b2a391caa.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="SquidSystem#4160" data-user-id="110814661741424640">SquidSystem</span>
+                <span class="chatlog__timestamp">29-Dec-18 06:41 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Can we name this channel Spore Whores</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300498360203214859/0f6368f068ad9c7abc5d62bf2e707289.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="CanisChiroptera#8673" data-user-id="300498360203214859">CanisChiroptera</span>
+                <span class="chatlog__timestamp">29-Dec-18 06:47 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">I like it</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/110814661741424640/9bc03b45a566b7f8fcfbf43b2a391caa.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="SquidSystem#4160" data-user-id="110814661741424640">SquidSystem</span>
+                <span class="chatlog__timestamp">29-Dec-18 06:47 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Good</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">29-Dec-18 07:07 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">nice!</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">04-Jan-19 01:52 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><img class="emoji emoji--large" alt="him" title="him" src="https://cdn.discordapp.com/emojis/523969235219644416.png" /></span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><img class="emoji emoji--large" alt="Baby_Orba" title="Baby_Orba" src="https://cdn.discordapp.com/emojis/529383144067956747.png" /></span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">05-Jan-19 03:00 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">purple spice be like *already used by another colony*</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300498360203214859/0f6368f068ad9c7abc5d62bf2e707289.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="CanisChiroptera#8673" data-user-id="300498360203214859">CanisChiroptera</span>
+                <span class="chatlog__timestamp">05-Jan-19 03:16 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">I&#39;m gonna fuckin fight another colony</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Tfw Stabberflinger empire is too polite to murder the primitive tribe taking all the fucking purple spice</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Those niggers don&#39;t even know what they have yet</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">05-Jan-19 04:20 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">easy, get an obelisk, become friends, then purchase their system!</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300498360203214859/0f6368f068ad9c7abc5d62bf2e707289.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="CanisChiroptera#8673" data-user-id="300498360203214859">CanisChiroptera</span>
+                <span class="chatlog__timestamp">05-Jan-19 04:22 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">I-</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/511032346125008904/531266169831948298/unknown.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/511032346125008904/531266169831948298/unknown.png" />
+                            </a>
+                        </div>
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">All these years playing Spore</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">And I never figured that shit out</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">05-Jan-19 04:33 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">how did it take you that long</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300498360203214859/0f6368f068ad9c7abc5d62bf2e707289.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="CanisChiroptera#8673" data-user-id="300498360203214859">CanisChiroptera</span>
+                <span class="chatlog__timestamp">05-Jan-19 04:34 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">I have the mind of an early creature stage blob with legs</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">05-Jan-19 04:34 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">understandable</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">hey btw what’s the spore version of woke. i’m just curious.</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300498360203214859/0f6368f068ad9c7abc5d62bf2e707289.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="CanisChiroptera#8673" data-user-id="300498360203214859">CanisChiroptera</span>
+                <span class="chatlog__timestamp">05-Jan-19 04:35 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Tribal stage intro cutscene</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">05-Jan-19 04:35 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">thank god</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300498360203214859/0f6368f068ad9c7abc5d62bf2e707289.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="CanisChiroptera#8673" data-user-id="300498360203214859">CanisChiroptera</span>
+                <span class="chatlog__timestamp">05-Jan-19 04:39 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://cdn.discordapp.com/attachments/376955742155964417/531270487083450371/image0.jpg">https://cdn.discordapp.com/attachments/376955742155964417/531270487083450371/image0.jpg</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(79,84,92,255)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+
+
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://cdn.discordapp.com/attachments/376955742155964417/531270487083450371/image0.jpg">
+                                                <img class="chatlog__embed-thumbnail" src="https://cdn.discordapp.com/attachments/376955742155964417/531270487083450371/image0.jpg" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300498360203214859/0f6368f068ad9c7abc5d62bf2e707289.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="CanisChiroptera#8673" data-user-id="300498360203214859">CanisChiroptera</span>
+                <span class="chatlog__timestamp">06-Jan-19 10:02 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Killed the entire channel with that, nice</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/329070581175549953/b5894ccbd521365e993bbd5975b1a3df.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="TheIncrediblyIronicWaffle#7914" data-user-id="329070581175549953">TheIncrediblyIronicWaffle</span>
+                <span class="chatlog__timestamp">06-Jan-19 10:03 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"></span>
+
+                        </div>
+
+                        <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/511032346125008904/531714569345957918/HAHAHAHA.png">
+                                
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/511032346125008904/531714569345957918/HAHAHAHA.png" />
+                            </a>
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">06-Jan-19 10:14 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">it’s too powerful emily of course that’d kill the channel</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/329070581175549953/b5894ccbd521365e993bbd5975b1a3df.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="TheIncrediblyIronicWaffle#7914" data-user-id="329070581175549953">TheIncrediblyIronicWaffle</span>
+                <span class="chatlog__timestamp">06-Jan-19 10:17 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Should&#39;ve been posted in the NSFW chat, smh</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/208438363991048192/9be83a3c4a72c5cb3b607d09e2ac6de2.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="uwu#0437" data-user-id="208438363991048192">uwu</span>
+                <span class="chatlog__timestamp">07-Jan-19 07:29 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Spore me, whores</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">13-Jan-19 03:49 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">when u planet bust that stupid enemy empire</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/110814661741424640/9bc03b45a566b7f8fcfbf43b2a391caa.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="SquidSystem#4160" data-user-id="110814661741424640">SquidSystem</span>
+                <span class="chatlog__timestamp">14-Jan-19 09:22 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">spore wars the clone spores</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300498360203214859/0f6368f068ad9c7abc5d62bf2e707289.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="CanisChiroptera#8673" data-user-id="300498360203214859">CanisChiroptera</span>
+                <span class="chatlog__timestamp">29-Jan-19 09:43 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><a href="https://steamuserimages-a.akamaihd.net/ugc/868490251629076476/746ABBC64E604A3D655C42050085A781C8A88EFB/">https://steamuserimages-a.akamaihd.net/ugc/868490251629076476/746ABBC64E604A3D655C42050085A781C8A88EFB/</a></span>
+
+                        </div>
+
+
+                        <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(79,84,92,255)"></div>
+                            <div class="chatlog__embed-content-container">
+                                <div class="chatlog__embed-content">
+                                    <div class="chatlog__embed-text">
+
+
+
+                                    </div>
+
+                                        <div class="chatlog__embed-thumbnail-container">
+                                            <a class="chatlog__embed-thumbnail-link" href="https://steamuserimages-a.akamaihd.net/ugc/868490251629076476/746ABBC64E604A3D655C42050085A781C8A88EFB/">
+                                                <img class="chatlog__embed-thumbnail" src="https://steamuserimages-a.akamaihd.net/ugc/868490251629076476/746ABBC64E604A3D655C42050085A781C8A88EFB/" />
+                                            </a>
+                                        </div>
+                                </div>    
+
+
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/263354148106272771/cfa0af30fe026b8d664ee6993c128908.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="poppi#0224" data-user-id="263354148106272771">poppi</span>
+                <span class="chatlog__timestamp">29-Jan-19 10:23 AM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">Pinned a message.</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">fuck</span>
+
+                        </div>
+
+
+
+                        <div class="chatlog__content">
+                            <span class="markdown">off</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">29-Jan-19 05:22 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">me</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">30-Jan-19 10:06 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">do you think he’s a *mimics destroying an entire galaxy for the grox empire* virgo</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/300498360203214859/0f6368f068ad9c7abc5d62bf2e707289.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="CanisChiroptera#8673" data-user-id="300498360203214859">CanisChiroptera</span>
+                <span class="chatlog__timestamp">30-Jan-19 10:09 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown"><img class="emoji " alt="stop" title="stop" src="https://cdn.discordapp.com/emojis/357249267586433034.png" /> <strong>| This channel has met the same fate as the game -- abandonment by its creators. Thanks for a channel-full of fun! |</strong> <img class="emoji " alt="stop" title="stop" src="https://cdn.discordapp.com/emojis/357249267586433034.png" /></span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/206565629535322113/c251ccfeaa1810fc7bc9b8aea7d5f573.png" />
+            </div>            
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Espurresso#7097" data-user-id="206565629535322113">Espurresso</span>
+                <span class="chatlog__timestamp">07-Jun-19 02:03 PM</span>
+
+                        <div class="chatlog__content">
+                            <span class="markdown">what if we kissed in the spore mobile primordial ooze and we were both cells</span>
+
+                        </div>
+
+
+
+            </div>
+        </div>
+</div>
+
+</body>
+</html>
